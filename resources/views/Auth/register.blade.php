@@ -10,8 +10,11 @@
     <div class="card">
       <div class="card-body register-card-body">
         <p class="login-box-msg">Register </p>
+
+        @include('templates.message')
   
-        <form action="../../index.html" method="post">
+        <form action="{{route('registerMember')}}" method="post">
+          @csrf
           <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Full name">
             <div class="input-group-append">
@@ -61,7 +64,7 @@
           </div>
         </form>
   
-        <a href="login.html" class="text-center">Login</a>
+        <a href="{{route('login')}}" class="text-center">Login</a>
       </div>
       <!-- /.form-box -->
     </div><!-- /.card -->
